@@ -6,13 +6,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { ContainerComponent } from './container/container.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
+import { FeaturesComponent } from './features/features.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { StoryComponent } from './story/story.component';
+import { StoryPicturesComponent } from './story/story-pictures/story-pictures.component';
+import { StoryContentComponent } from './story/story-content/story-content.component';
+import { ProductsComponent } from './products/products.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    ContainerComponent
+    ContainerComponent,
+    SidebarComponent,
+    HeaderComponent,
+    FeaturesComponent,
+    DocumentsComponent,
+    StoryComponent,
+    StoryPicturesComponent,
+    StoryContentComponent,
+    ProductsComponent,
+    GalleryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
