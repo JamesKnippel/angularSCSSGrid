@@ -4,8 +4,8 @@
   background-color: #ddd;
 
   display: grid;
-  grid-template-rows: repeat(2, 150px);
-  grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: repeat(2, 150px);
+  // grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 
   /*to affect implicit grid rows*/
@@ -16,11 +16,21 @@
   grid-auto-columns: .5fr;
 
   /* default is stretch for grid*/
-  align-items: center; // Stretch // Center // End // Start
-  justify-items: center;
+  // align-items: center; // Stretch // Center // End // Start
+  // justify-items: center;
 
   /* Align Grid Tracks to the Grid Container */
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 150px);
+  height: 1000px;
 
+  /* centers all tracks in grid container horizontally */
+  justify-content: center; // center // start // end 
+  // space-between // space-around // space-evenly
+  
+  /* vertically centers/affects tracks in grid container */
+  align-content: center; // same options as justify contents
+  
   
   .item {
     padding: 10px;
@@ -32,8 +42,13 @@
     &--4 {
       background-color: crimson;
       grid-row: 2 / span 3;
-      align-self: start;
-      justify-self: start;
+      // align-self: start;
+      // justify-self: start;
+    }
+
+    &--6 {
+      background-color: lightcoral;
+      grid-row: 2 / span 2;
     }
 
     &--7 {
