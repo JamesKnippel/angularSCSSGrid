@@ -10,14 +10,35 @@
 
   /*to affect implicit grid rows*/
   grid-auto-rows: 80px;
-  grid-auto-flow: column;
+  /* Align grid items to grid areas */
+  grid-auto-flow: row;
+  /* implicit grid-cell size */
   grid-auto-columns: .5fr;
+
+  /* default is stretch for grid*/
+  align-items: center; // Stretch // Center // End // Start
+  justify-items: center;
+
+  /* Align Grid Tracks to the Grid Container */
+
   
   .item {
-    padding: 20px;
+    padding: 10px;
     color: white;
     font-size: 30px;
     font-family: sans-serif;
     background-color: orangered;
+
+    &--4 {
+      background-color: crimson;
+      grid-row: 2 / span 3;
+      align-self: start;
+      justify-self: start;
+    }
+
+    &--7 {
+      background-color: palevioletred;
+      grid-column: 1 / -1;
+    }
   }
 }
