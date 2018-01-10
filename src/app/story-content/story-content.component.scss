@@ -1,6 +1,18 @@
-@import '~sass/base';
+@import '~sass/_base';
+// @import '~sass/_typography';
 
  :host {
     background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+    padding: 6rem 12rem;
   }
+
+  .story__text {
+    margin-bottom: 4rem;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+
+  
+
+  
