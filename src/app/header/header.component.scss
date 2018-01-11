@@ -30,12 +30,34 @@
   }
 
   &__seenon-text {
+    /* Even text can be a grid element*/
+    display: grid; 
+    /* 3 columns, dash text dash */
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
 
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor; // takes current text color and uses that;
+    }
   }
 
   &__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-items: center;
+
     img {
       height: 2.5rem;
+      filter: brightness(70%);
     }
   }
 }
