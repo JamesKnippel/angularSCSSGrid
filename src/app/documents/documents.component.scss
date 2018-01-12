@@ -10,6 +10,10 @@
   justify-content: center;
   justify-items: center;
   grid-row-gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
 }
 
 .documents {
@@ -20,6 +24,11 @@
     grid-column-gap: 2rem;
     grid-row-gap: 5vh; // %5 VH to dynamically keep similar on large screens
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      /* converts single grid column with cells */
+      grid-template-columns: repeat(3, min-content max-content);
+    }
   }
 
   &__img {
